@@ -39,6 +39,7 @@ SOURCES += sources/strings/ft_split.c
 SOURCES += sources/strings/ft_strchr.c
 SOURCES += sources/strings/ft_strdup.c
 SOURCES += sources/strings/ft_striteri.c
+SOURCES += sources/strings/ft_strjoin.c
 SOURCES += sources/strings/ft_strlcat.c
 SOURCES += sources/strings/ft_strlcpy.c
 SOURCES += sources/strings/ft_strmapi.c

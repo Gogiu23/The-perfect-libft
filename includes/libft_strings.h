@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft_strings.h                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gdominic <gdominic@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/11 19:20:56 by gdominic          #+#    #+#             */
+/*   Updated: 2022/06/11 19:21:02 by gdominic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #ifndef LIBFT_STRINGS_H
 # define LIBFT_STRINGS_H
 
@@ -15,5 +26,6 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *dst, const char *src, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);		
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif 

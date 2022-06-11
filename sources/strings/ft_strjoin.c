@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_puts.h                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gdominic <gdominic@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/11 19:20:21 by gdominic          #+#    #+#             */
-/*   Updated: 2022/06/11 19:20:35 by gdominic         ###   ########.fr       */
+/*   Created: 2022/06/11 19:09:21 by gdominic          #+#    #+#             */
+/*   Updated: 2022/06/11 19:12:40 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef LIBFT_PUTS_H
-# define LIBFT_PUTS_H
+#include "libft.h"
 
-# include "libft.h"
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*d;
+	int		i;
+	int		dest;
 
-void	ft_putchar_fd(char c, int fd);
-int		ft_putchar(const char c);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-int		ft_putnbr_u(unsigned int n, int counter);
-int		ft_putnbr(int n, int counter);
-int		ft_putstr(const char *s);
-void	ft_putstr_fd(char *s, int fd);
-
-#endif
+	dest = ft_strlen(s1) + ft_strlen(s2);
+	i = 0;
+	d = (char *)malloc((dest + 1) * sizeof (char));
+	if (!d)
+		return (NULL);
+	while (i < ft_strlen(s1))
+	{
+		d[i] = s1[i];
+		i++;
+	}
+	while (i < dest)
+	{
+		d[i] = *s2;
+		i++;
+		s2++;
+	}
+	d[i] = '\0';
+	return (d);
+}
