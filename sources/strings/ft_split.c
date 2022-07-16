@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 21:13:47 by gdominic          #+#    #+#             */
-/*   Updated: 2022/05/23 23:29:08 by gdominic         ###   ########.fr       */
+/*   Updated: 2022/07/16 17:07:41 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -44,7 +44,7 @@ static	size_t	counter_words(const char *str, char c)
 	return (count_words);
 }
 
-static char	**ft_domall(const char *s, char c, char **dest)
+static char	**ft_domall(char *s, char c, char **dest)
 {
 	unsigned int	start;
 	size_t			g;
@@ -73,7 +73,7 @@ static char	**ft_domall(const char *s, char c, char **dest)
 	return (dest);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char *s, char c)
 {
 	char	**dest;
 	size_t	counter;

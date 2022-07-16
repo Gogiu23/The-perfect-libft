@@ -1,3 +1,4 @@
+INCLUDES += includes/get_next_line_bonus.h
 INCLUDES += includes/libft.h
 INCLUDES += includes/libft_checks.h
 INCLUDES += includes/libft_converse.h

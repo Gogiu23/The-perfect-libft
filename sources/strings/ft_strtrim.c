@@ -6,13 +6,13 @@
 /*   By: gdominic <gdominic@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 16:27:09 by gdominic          #+#    #+#             */
-/*   Updated: 2022/05/20 20:26:54 by gdominic         ###   ########.fr       */
+/*   Updated: 2022/07/16 17:10:23 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 #include <stdio.h>
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char *s1, char *set)
 {
 	unsigned int	i;
 

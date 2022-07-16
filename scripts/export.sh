@@ -1,4 +1,4 @@
-TARGET="../libftprintf"
+TARGET="../libft"
 
 # Clear target directory
 rm -rf $TARGET
