@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 11:52:54 by gdominic          #+#    #+#             */
-/*   Updated: 2022/05/17 21:58:01 by gdominic         ###   ########.fr       */
+/*   Updated: 2022/07/16 06:17:49 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@
 # include "./libft_memory.h"
 # include "./libft_puts.h"
 # include "./libft_strings.h"
+# include "./get_next_line_bonus.h"
 
 #endif

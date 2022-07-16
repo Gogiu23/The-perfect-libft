@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 19:20:56 by gdominic          #+#    #+#             */
-/*   Updated: 2022/06/11 19:21:02 by gdominic         ###   ########.fr       */
+/*   Updated: 2022/07/16 06:16:33 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_STRINGS_H
@@ -14,8 +14,9 @@
 
 # include "libft.h"
 
+char	*ft_substr(char *s, unsigned int start, unsigned int len);
+char	*ft_strjoin(char *ptr, char *buffer);
 char	**ft_split(char const *s, char c);
-char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
@@ -25,7 +26,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *dst, const char *src, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t len);
-char	*ft_substr(char const *s, unsigned int start, size_t len);		
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strchr(char *ptr, int n);
+size_t	ft2_strlen(char *str);
 
 #endif 
