@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoi_plus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gdominic <gdominic@student.42barcel>       +#+  +:+       +#+        */
+/*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/16 16:37:51 by gdominic          #+#    #+#             */
-/*   Updated: 2022/10/21 21:24:26 by gdominic         ###   ########.fr       */
+/*   Created: 2022/10/21 21:21:53 by gdominic          #+#    #+#             */
+/*   Updated: 2022/10/21 21:24:14 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	ft_atoi(const char *str)
+long	ft_atoi_plus(const char *str)
 {
-	int	i;
-	int	r;
-	int	result;
+	int		i;
+	long	r;
+	long	result;
 
 	result = 0;
 	r = 1;
@@ -38,6 +38,7 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	result *= r;
+	ft_check_arg_atoi(str, i);
 	return (result);
 }
 	//1 while espacios avanzo ++
@@ -45,3 +46,14 @@ int	ft_atoi(const char *str)
 	//3 mientras este entre '0' i '9' sumo a resultado (linea magica)
 	//4 devuelo resultado * signo
 	//result = (result * 10) + (str[i] - '0');
+
+void	ft_check_arg_atoi(const char *str, int i)
+{
+	if (ft_strlen(str) == i)
+		return ;
+	else
+	{
+		ft_putstr_error("Error\n");
+		exit(0);
+	}
+}
