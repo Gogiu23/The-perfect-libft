@@ -1,7 +1,25 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/11/05 09:13:01 by gdominic          #+#    #+#              #
+#    Updated: 2022/11/05 09:36:47 by gdominic         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-#
+
 -include sources.mk
 -include includes.mk
 
+#=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-#
+
 NAME 			= libft.a
+
+#=-=-=-=-=-=-=- COLORS DEFINITION =-=-=-=-=-=-=-=-=-#
 
 BLACK			=	\033[0;30m
 RED				=	\033[0;31m
@@ -21,19 +39,27 @@ LIGHT_CYAN		=	\033[1;36m
 WHITE			=	\033[1;37m
 NO_COLOR		=	\033[0m
 
+#=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-#
+
 INCLUDE_PATH	= ./includes
 
 OBJS 			= $(SOURCES:.c=.o)
+DEPS			= $(SOURCES:.c=.d)
 
 CC 				= gcc
-CFLAGS 			= -Wall -Wextra -Werror -O3 -Ofast -flto -march=native -ffast-math
+CFLAGS 			= -Wall -Wextra -Werror -O3 -Ofast -flto=thin -march=native -ffast-math
+DFLAGS			= -MMD -MP -g
 RM	 			= rm -f
+MKFL			= Makefile
 
-all: $(NAME)
+#=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=#
 
-%.o:	%.c $(INCLUDES) 
-	$(CC) $(CFLAGS) -I $(INCLUDE_PATH) -c $< -o $@
-	@printf "\033[2K\r$(YELLOW)$(NAME): $(LIGHT_BLUE)$<$(RESET)"
+all: 
+	$(MAKE) $(NAME)
+
+%.o:	%.c $(MKFL) 
+	@$(CC) $(CFLAGS) $(DFLAGS) -I $(INCLUDE_PATH) -c $< -o $@
+	@printf "\033[2K\r$(YELLOW)$(NAME):$(LIGHT_BLUE)$<........Done✅ $(RESET)"
 
 
 $(NAME): $(OBJS)
@@ -41,8 +67,11 @@ $(NAME): $(OBJS)
 	@echo Archive\ created!!
 	@printf "\033[2K\r$(BLUE)$(NAME): $(GREEN)Compiled Bro!!! [√]$(RESET)\n"
 
+#=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=#
+
 clean:
 	@$(RM) $(OBJS)
+	@$(RM) $(DEPS)
 	@$(RM) a.out
 	@printf "$(RED)$(NAME): $(ORANGE)Cleaning all .o in your libft.\n$(RESET)"
 
@@ -79,5 +108,11 @@ end:
 	@make fclean
 	@make export
 	@printf "$(BLUE)$(NAME): $(LIGHT_CYAN)Prepared to be pushed.\n$(RESET)"
+
+#=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=#
+
+-include $(DEPS)
+
+#=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=#
 
 .PHONY: all clean fclean re gmk norminette norminette-exported export end
