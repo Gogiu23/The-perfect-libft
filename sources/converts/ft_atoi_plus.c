@@ -6,11 +6,11 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 21:21:53 by gdominic          #+#    #+#             */
-/*   Updated: 2022/10/21 21:24:14 by gdominic         ###   ########.fr       */
+/*   Updated: 2022/11/05 11:01:00 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -53,7 +53,7 @@ void	ft_check_arg_atoi(const char *str, int i)
 		return ;
 	else
 	{
-		ft_putstr_error("Error\n");
+		ft_putstr_error("Error\nThe value should be an integer");
 		exit(0);
 	}
 }
