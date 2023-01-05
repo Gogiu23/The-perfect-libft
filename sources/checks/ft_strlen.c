@@ -6,10 +6,10 @@
 /*   By: gdominic <gdominic@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 15:48:20 by gdominic          #+#    #+#             */
-/*   Updated: 2022/06/01 19:41:40 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/01/05 23:33:21 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../../includes/libft.h"
 
 int	ft_strlen(const char *s)
 {

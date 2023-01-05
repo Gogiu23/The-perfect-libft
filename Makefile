@@ -6,7 +6,7 @@
 #    By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/05 09:13:01 by gdominic          #+#    #+#              #
-#    Updated: 2022/11/05 09:36:47 by gdominic         ###   ########.fr        #
+#    Updated: 2023/01/06 00:30:31 by gdominic         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ OBJS 			= $(SOURCES:.c=.o)
 DEPS			= $(SOURCES:.c=.d)
 
 CC 				= gcc
-CFLAGS 			= -Wall -Wextra -Werror -O3 -Ofast -flto=thin -march=native -ffast-math
+CFLAGS 			= -Wall -Wextra -Werror -O3 -Ofast -flto=thin -ffast-math
 DFLAGS			= -MMD -MP -g
 RM	 			= rm -f
 MKFL			= Makefile

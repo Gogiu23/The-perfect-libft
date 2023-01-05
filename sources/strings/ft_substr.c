@@ -6,11 +6,11 @@
 /*   By: gdominic <gdominic@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 21:52:38 by gdominic          #+#    #+#             */
-/*   Updated: 2022/07/16 06:16:42 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/01/05 23:29:59 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 char	*ft_substr(char *s, unsigned int start, unsigned int len)
 {

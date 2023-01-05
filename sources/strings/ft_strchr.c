@@ -6,10 +6,10 @@
 /*   By: gdominic <gdominic@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 15:52:02 by gdominic          #+#    #+#             */
-/*   Updated: 2022/07/16 06:12:38 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/01/05 23:28:29 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+#include "../../includes/libft.h"
 
 char	*ft_strchr(char *ptr, int n)
 {
