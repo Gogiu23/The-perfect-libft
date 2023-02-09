@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 19:15:59 by gdominic          #+#    #+#             */
-/*   Updated: 2022/10/21 21:29:59 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/02/09 18:57:22 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_CHECKS_H
